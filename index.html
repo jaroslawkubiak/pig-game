@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="stylePC.css" />
+    <link rel="stylesheet" href="stylePhoneLandscape.css" />
+    <link rel="stylesheet" href="stylePhonePortrait.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name hidden" id="winner--0">Zwycięża</h2>
+        <h2 class="name" id="name--0">Gracz 1</h2>
+        <p class="score" id="score--0">0</p>
+        <div class="current">
+          <p class="current-label">Bieżący wynik</p>
+          <p class="current-score" id="current--0">0</p>
+          <p class="current-score-hidden hidden" id="current--0-hidden">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name hidden" id="winner--1">Zwycięża</h2>
+        <h2 class="name" id="name--1">Gracz 2</h2>
+        <p class="score" id="score--1">0</p>
+        <div class="current">
+          <p class="current-label">Bieżący wynik</p>
+          <p class="current-score" id="current--1">0</p>
+          <p class="current-score-hidden hidden" id="current--1-hidden">0</p>
+        </div>
+      </section>
+
+      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <button class="btn btn--new">🔄 Nowa gra</button>
+      <button class="btn btn--rules">📄 Zasady</button>
+      <button class="btn btn--roll btn--player--0">🎲 Rzuć kostką</button>
+      <button class="btn btn--hold btn--player--0">📥 Wstrzymaj</button>
+
+      <!-- zasady gry -->
+      <div class="zasady hidden">
+        <button class="zamknij-zasady">&times;</button>
+        <h1>Zasady gry:</h1>
+        <ul class="rulesList">
+          <li class="rulerItem">
+            W grze bierze udział dwóch graczy. Zaczyna gracz 1.
+          </li>
+          <li class="rulerItem">
+            Gracz klika <span class="rules-btn">🎲 Rzuć kostką</span> aby
+            zacząć:
+          </li>
+
+          <ul class="rulseSubList">
+            <li class="rulerItem">
+              Gdy wypanie 2 do 6, bieżący wynik gracza zostaje zwiększony o
+              ilość oczek która wypadła. Gracz gra dalej.
+            </li>
+            <li class="rulerItem">
+              Gdy wypanie 1, gracz traci swoje bieżące punkty oraz traci swoją
+              kolejkę.
+            </li>
+            <li class="rulerItem">
+              Gdy gracz uzna, że chce zakończyć swoją rundę i dodać bieżące
+              punkty do wyniku głównego, klika
+              <span class="rules-btn">📥 Wstrzymaj</span> <br />Następuje zmiana
+              graczy.
+            </li>
+          </ul>
+          <li class="rulerItem">
+            Wygrywa gracz, który pierwszy zdobędzie
+            <span id="winning-score"></span> pkt.
+          </li>
+          <li class="rulerItem">
+            Kolejną rundę zaczyna zwycięzca poprzedniej rundy.
+          </li>
+        </ul>
+      </div>
+      <!-- statystyki graczyy -->
+      <table class="stats-table hidden">
+        <tr class="stats-naglowek">
+          <td class="stats-td"></td>
+          <td class="stats-td">Wygrane</td>
+          <td class="stats-td">Przegrane</td>
+          <td class="stats-td">Wstrzymano</td>
+          <td class="stats-td">Stracone pkt</td>
+          <td class="stats-td">
+            <img src="dice-1.png" class="stats-kostka" />
+          </td>
+          <td class="stats-td">
+            <img src="dice-2.png" class="stats-kostka" />
+          </td>
+          <td class="stats-td">
+            <img src="dice-3.png" class="stats-kostka" />
+          </td>
+          <td class="stats-td">
+            <img src="dice-4.png" class="stats-kostka" />
+          </td>
+          <td class="stats-td">
+            <img src="dice-5.png" class="stats-kostka" />
+          </td>
+          <td class="stats-td">
+            <img src="dice-6.png" class="stats-kostka" />
+          </td>
+        </tr>
+
+        <tr class="stats-gracz">
+          <td class="stats-td">Gracz 1</td>
+          <td id="player0--wins"></td>
+          <td id="player0--lose"></td>
+          <td id="player0--hold"></td>
+          <td id="player0--losePoints"></td>
+          <td id="player0--roll1"></td>
+          <td id="player0--roll2"></td>
+          <td id="player0--roll3"></td>
+          <td id="player0--roll4"></td>
+          <td id="player0--roll5"></td>
+          <td id="player0--roll6"></td>
+        </tr>
+
+        <tr class="stats-gracz">
+          <td class="stats-td">Gracz 2</td>
+          <td id="player1--wins"></td>
+          <td id="player1--lose"></td>
+          <td id="player1--hold"></td>
+          <td id="player1--losePoints"></td>
+          <td id="player1--roll1"></td>
+          <td id="player1--roll2"></td>
+          <td id="player1--roll3"></td>
+          <td id="player1--roll4"></td>
+          <td id="player1--roll5"></td>
+          <td id="player1--roll6"></td>
+        </tr>
+      </table>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
