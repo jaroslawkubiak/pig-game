@@ -247,7 +247,7 @@ main {
 }
 
 .stats-table {
-  background-color: rgb(5, 31, 66);
+  background-color: rgb(14, 36, 65);
   position: absolute;
   top: 40%;
   left: 0%;
@@ -256,20 +256,22 @@ main {
   font-size: 2em;
 }
 .stats-naglowek {
-  background-color: #86066b;
+  background-color: #9b59b6;
   color: antiquewhite;
   height: 1em;
 }
 
 .stats-gracz {
-  background-color: aliceblue;
+  background-color: #ecf0f1;
   height: 1em;
 }
 
 .stats-td {
   padding: 5px;
+  height: 30px;
 }
 .stats-kostka {
   width: 50px;
   height: 50px;
+  border-radius: 5px;
 }

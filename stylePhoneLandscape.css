@@ -208,28 +208,14 @@
 
   .stats-table {
     position: absolute;
-    top: 60%;
+    top: 50%;
     left: 5%;
     width: 90%;
     text-align: center;
     font-size: 0.6em;
     border: 0px solid;
-
-  }
-  .stats-naglowek {
-    background-color: #86066b;
-    color: antiquewhite;
-    height: 1em;
   }
 
-  .stats-gracz {
-    background-color: aliceblue;
-    height: 1em;
-  }
-
-  .stats-td {
-    padding: 5px;
-  }
   .stats-kostka{
     width: 30px;
     height: 30px;
